@@ -1,0 +1,44 @@
+{
+    "watches": [
+        {
+            "id": 1,
+            "title": "Exquisite Watches",
+            "subtitle": "Gold Luxury, Choose Us",
+            "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+            "price": "$499",
+            "image": "./assets/watch1.png",
+            "bgGradient": "linear-gradient(135deg, #F4A764 0%, #FFDEC2 100%)",
+            "accentColor": "#0066CC"
+        },
+        {
+            "id": 2,
+            "title": "Dainty Timepieces",
+            "subtitle": "Silver Luxury, Choose Us",
+            "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
+            "price": "$469",
+            "image": "./assets/watch2.png",
+            "bgGradient": "linear-gradient(135deg,#ADB0B0 0%, #E1E1E1 100%)",
+            "accentColor": "#4CAF50"
+        },
+        {
+            "id": 3,
+            "title": "Elegant Timepieces",
+            "subtitle": "Choose Luxury, Choose Us",
+            "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+            "price": "$529",
+            "image": "./assets/watch3.png",
+            "bgGradient": "linear-gradient(135deg, #30A357 0%, #75E39A 100%)",
+            "accentColor": "#FF5722"
+        },
+        {
+            "id": 4,
+            "title": "Refined Timepieces",
+            "subtitle": "Choose Luxury, Choose Us",
+            "description": "Premium GPS smartwatch with advanced health monitoring and fitness features for an active lifestyle.",
+            "price": "$599",
+            "image": "./assets/watch4.png",
+            "bgGradient": "linear-gradient(135deg, #F24F4F 0%, #FFA895 100%)",
+            "accentColor": "#673AB7"
+        }
+    ]
+}
