@@ -34,8 +34,8 @@ body {
 
 /* Header Styles with Animation */
 .header {
-    padding: 20px 0;
-    position: fixed;
+    padding: 10px 0;
+    position: sticky;
     width: 100%;
     z-index: 100;
     background-color: transparent;
@@ -65,7 +65,7 @@ body {
 }
 
 .navigation {
-    width: 40%;
+    width: 60%;
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
@@ -76,6 +76,7 @@ body {
     gap: 30px;
     justify-content: space-evenly;
 }
+
 
 .navigation a {
     text-decoration: none;
@@ -101,6 +102,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+@media(max-width:1180px){
+    .navigation {
+        width: 70%;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+}
+
 /* Mobile menu button */
 .menu-toggle {
     display: none;
@@ -111,9 +121,11 @@ body {
     color: white;
 }
 
+
+
 /* Hero Carousel Styles */
 .hero-carousel {
-    padding-top: 100px;
+    padding-top: 2rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -307,6 +319,20 @@ body {
     opacity: 1;
     background: var(--accent-color);
 }
+@media(max-width:768px){
+    .header {
+        /* padding: 10px 0; */
+        position: static;
+        width: 100%;
+        z-index: 100;
+        background-color: transparent;
+        margin-top: 0;
+        transform: translateY(-100%);
+    }
+    
+    
+}
+
 
 /* Mobile navigation specific styles */
 #navMenu {
@@ -319,10 +345,11 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     padding: 20px;
     width: 100%;
     z-index: 101;
+    margin-bottom: 120px;
 }
 
 #navMenu.mobile-visible li {
@@ -465,6 +492,9 @@ body {
         width: 100%;
         padding: 0 15px;
     }
+    #navMenu.mobile-visible{
+        padding: 5px 5px;
+    }
     
     .logo img {
         height: 30px;
@@ -487,7 +517,13 @@ body {
     
     .hero-carousel {
         padding-top: 120px;
+        /* padding-top: 2rem; */
     }
+    .header{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
     
     .social-icon {
         width: 35px;
@@ -498,7 +534,7 @@ body {
 /* Animation for slide transitions */
 .splide__slide {
     opacity: 0.7;
-    filter: blur(2px);
+    /* filter: blur(2px); */
     transition: all 0.5s ease;
 }
 
@@ -506,7 +542,6 @@ body {
     opacity: 1;
     filter: blur(0);
 }
-
 
 /* Smooth background transition */
 body {
