@@ -67,50 +67,6 @@ function populateSlider(watches) {
         slidesContainer.appendChild(slide);
     });
 }
-
-// Initialize Splide.js with animations
-// function initializeSplide(watches) {
-//     const splide = new Splide('.splide', {
-//         type: 'loop',
-//         perPage: 1,
-//         focus: 'center',
-//         autoplay: false,
-//         interval: 5000,
-//         pagination: true,
-//         arrows: true,
-//         speed: 800,
-//         easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-//         rewind: true,
-//         rewindSpeed: 800,
-//         waitForTransition: true
-//     }).mount();
-
-//     // Set initial watch information
-//     updateWatchInfo(watches[0]);
-
-//     // Animate UI when slide moves
-//     splide.on('move', function() {
-//         document.querySelector('.product-info').style.opacity = '0.5';
-//         document.querySelector('.product-info').style.transform = 'translateY(10px)';
-//         animateHeader();
-//     });
-
-//     splide.on('moved', function() {
-//         const activeSlideId = parseInt(splide.Components.Elements.slides[splide.index].dataset.watchId);
-//         const selectedWatch = watches.find(watch => watch.id === activeSlideId);
-        
-//         setTimeout(() => {
-//             updateWatchInfo(selectedWatch);
-//             document.querySelector('.product-info').style.opacity = '1';
-//             document.querySelector('.product-info').style.transform = 'translateY(0)';
-//         }, 200);
-//     });
-
-//     // Refresh Splide on window resize
-//     window.addEventListener('resize', function() {
-//         splide.refresh();
-//     });
-// }
 function initializeSplide(watches) {
     const splide = new Splide('.splide', {
         type: 'loop',
