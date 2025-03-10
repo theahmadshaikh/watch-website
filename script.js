@@ -67,6 +67,7 @@ function populateSlider(watches) {
         slidesContainer.appendChild(slide);
     });
 }
+
 function initializeSplide(watches) {
     const splide = new Splide('.splide', {
         type: 'loop',
@@ -84,12 +85,12 @@ function initializeSplide(watches) {
     }).mount();
 
     const carouselContent = document.querySelector('.carousel-content');
+    const header = document.querySelector('.header'); // Get header element
 
     // Set initial watch information
     updateWatchInfo(watches[0]);
 
     splide.on('move', function() {
-        // Ensure animation resets properly
         carouselContent.classList.remove('fade-in');
         carouselContent.classList.add('fade-out');
     });
@@ -101,9 +102,15 @@ function initializeSplide(watches) {
         setTimeout(() => {
             updateWatchInfo(selectedWatch);
             carouselContent.classList.remove('fade-out');
-            void carouselContent.offsetWidth; // Force reflow for animation restart
             carouselContent.classList.add('fade-in');
-        }, 300); // Small delay ensures smooth transition
+            console.log(splide.index)
+            if(splide.index==1){
+            //  Force restart animation
+            header.style.animation = 'none'; // Reset animation
+            void header.offsetWidth; // Trigger reflow (forces browser to recognize change)
+            header.style.animation = 'slideDown 0.8s ease-out forwards'; // Reapply animation
+            }
+        }, 100); // Small delay ensures smooth transition
     });
 
     window.addEventListener('resize', function() {
@@ -112,15 +119,8 @@ function initializeSplide(watches) {
 }
 
 
-// Animate the header
-function animateHeader() {
-    const header = document.querySelector('.header');
-    header.classList.remove('animate-header');
-    void header.offsetWidth; // Force reflow
-    header.classList.add('animate-header');
-}
 
-// Update Watch Information
+
 function updateWatchInfo(watch) {
     document.getElementById('product-title').textContent = watch.title;
 
